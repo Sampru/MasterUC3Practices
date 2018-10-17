@@ -1,7 +1,3 @@
-PRÁCTICA 2
-
-Resultado:
---------------------------------------------------------
 nº = 1  | Min = 6144  | Max = 71821311  | Mean = 7511.1552  | 99% = 18431 | 99.9% = 41983
 nº = 2  | Min = 6144  | Max = 259071  | Mean = 6743.75424 | 99% = 11263 | 99.9% = 19455
 nº = 3  | Min = 4096  | Max = 10371583  | Mean = 5623.9744  | 99% = 9727  | 99.9% = 15871
@@ -52,10 +48,3 @@ nº = 47 | Min = 4096  | Max = 199167  | Mean = 4941.1328  | 99% = 6655  | 99.9%
 nº = 48 | Min = 4096  | Max = 62975 | Mean = 4927.42144 | 99% = 6655  | 99.9% = 14335
 nº = 49 | Min = 4096  | Max = 58367 | Mean = 4930.59328 | 99% = 6655  | 99.9% = 13823
 nº = 50 | Min = 4096  | Max = 79359 | Mean = 4934.38464 | 99% = 6655  | 99.9% = 14335
---------------------------------------------------------
-
-Comentario:
---------------------------------------------------------
-En todas las ejecuciones realizadas, se ha podido observar una mejora a partir de la tercera ejecución. Se ha obtenido una diferencia de 2500 nanosegundos entre las medias de estas. Aunque en todas las ejecuciones, ha habido una variacion de máximos que no puedan mostrar una mejora significativa, los demas datos si que son apreciables. Esto se debe a que por cualquier acción del sistema, una ejecución puede haber tardado más del lo normal, pero el reflejo mas claro esta en la media, porque realmente se ve cuando empieza a afectar el JIT.
-
-Para evitar sobrecargar la función de objetos, se ha utilizado el mismo histograma para todas las medidas, vaciandola entre ejecuciones. Tambien se ha intentado recoger los datos de la ejecucion en una lista dinámica, pero se ha observado un impacto en el rendimiento de la tarea, por lo que se ha descartado. Lo más eficiaz ha sido printar los resultados a medida que se obtengan, o almacenarlos en un espacio fijo.

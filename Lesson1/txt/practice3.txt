@@ -1,7 +1,3 @@
-PRÁCTICA 3
-
-Resultado:
---------------------------------------------------------
        Value     Percentile TotalCount 1/(1-Percentile)    |          Value     Percentile TotalCount 1/(1-Percentile) 
                                                            |                                                           
     10.00000 0.000000000000        219           1.00      |       10.00000 0.000000000000          3           1.00   
@@ -53,6 +49,3 @@ Resultado:
 #[Mean    =     32.60000, StdDeviation   =     52.01610]   |   #[Mean    =   1059.33500, StdDeviation   =    767.19342]
 #[Max     =    497.00000, Total count    =          400]   |   #[Max     =   2886.00000, Total count    =          400]
 #[Buckets =            1, SubBuckets     =       262144]   |   #[Buckets =            1, SubBuckets     =       262144]
---------------------------------------------------------
-Comentario:
---------------------------------------------------------
