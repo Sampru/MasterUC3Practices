@@ -4,6 +4,7 @@ import com.cnebrera.uc3.tech.lesson2.util.VariableSizeMessage;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.ByteBuffer;
 
@@ -14,11 +15,15 @@ public class TCPVarSizeServer
 {
     public static void main(String argv[]) throws Exception
     {
-        // TODO 1 create the acceptor socket
-
-        // TODO 2 accept a connection and get the connection socket
-
-        // TODO 3 send the messages to the connected client socket
+        // Open socket with resource
+        try (ServerSocket soc = new ServerSocket(16000)) {
+            // Get a client connection
+            try (Socket con = soc.accept()) {
+                sendMessagesToClient(con);
+            }
+        }  catch (InterruptedException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -31,40 +36,44 @@ public class TCPVarSizeServer
     private static void sendMessagesToClient(final Socket connectionSocket) throws IOException, InterruptedException
     {
         // Get the output stream
-        final OutputStream outputStream = connectionSocket.getOutputStream();
+        try (OutputStream outputStream = connectionSocket.getOutputStream()) {
 
-        // The buffer to write the msg size header, the message size will be an integer (4 bytes)
-        final ByteBuffer headerBuffer = ByteBuffer.allocate(4);
 
-        while (true)
-        {
-            // Clear the buffer
-            headerBuffer.clear();
+            // The buffer to write the msg size header, the message size will be an integer (4 bytes)
+            final ByteBuffer headerBuffer = ByteBuffer.allocate(4);
 
-            // Generate random message
-            final VariableSizeMessage rndMsg = VariableSizeMessage.generateRandomMsg(8);
+            while (true) {
+                // Clear the buffer
+                headerBuffer.clear();
 
-            // Convert to binary
-            final ByteBuffer binaryMessage = rndMsg.toBinary();
+                // Generate random message
+                final VariableSizeMessage rndMsg = VariableSizeMessage.generateRandomMsg(8);
 
-            // Serialize the msg size
-            headerBuffer.putInt(binaryMessage.position());
+                // Convert to binary
+                final ByteBuffer binaryMessage = rndMsg.toBinary();
 
-            // Flip the binary message prior to writing to adjust position to 0 and limit to the end of the buffer
-            binaryMessage.flip();
+                // Serialize the msg size
+                headerBuffer.putInt(binaryMessage.position());
 
-            System.out.println("About to send msg of size " + binaryMessage.position() + headerBuffer.position());
+                // Flip the binary message prior to writing to adjust position to 0 and limit to the end of the buffer
+                binaryMessage.flip();
 
-            // TODO 4 Write the header with the message size
+                System.out.println("About to send msg of size " + binaryMessage.limit());
 
-            // TODO 5 Write the contents
+                // Write the header with the message size
+                outputStream.write(headerBuffer.array());
 
-            // TODO 6 Force it to be sent without batching
+                // Write the contents
+                outputStream.write(binaryMessage.array(), 0, binaryMessage.limit());
 
-            System.out.println("Message sent: " + rndMsg.toString());
+                // Force it to be sent without batching
+                outputStream.flush();
 
-            // Wait a bit
-            Thread.sleep(1000);
+                System.out.println("Message sent: " + rndMsg.toString());
+
+                // Wait a bit
+                Thread.sleep(1000);
+            }
         }
     }
 }

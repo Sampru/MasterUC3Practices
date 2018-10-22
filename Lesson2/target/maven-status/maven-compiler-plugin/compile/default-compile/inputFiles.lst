@@ -1,0 +1,9 @@
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/mcast/McastServer.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeClient.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPFixSizeServer.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/util/VariableSizeMessage.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeServer.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPFixSizeClient.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeClientBigMsgs.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/util/FixSizeMessage.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson2/src/main/java/com/cnebrera/uc3/tech/lesson2/mcast/McastClient.java
