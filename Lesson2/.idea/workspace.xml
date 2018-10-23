@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2c231c53-facb-4d50-8f22-fe8022c4ef23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Lesson1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPFixSizeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPFixSizeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPFixSizeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPFixSizeServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson1/src/main/java/com/cnebrera/uc3/tech/lesson1/PracticeLatency3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson1/src/main/java/com/cnebrera/uc3/tech/lesson1/PracticeLatency3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson1/txt/practice3-a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson1/txt/practice3-a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson1/txt/practice3-b.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson1/txt/practice3-b.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson1/txt/practice3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson1/txt/practice3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +20,7 @@
     <session id="-403014243">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -82,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+            <state relative-caret-position="222">
+              <caret line="63" column="57" lean-forward="true" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -268,16 +269,15 @@
       <updated>1540124547536</updated>
       <workItem from="1540124552378" duration="3927000" />
       <workItem from="1540143242880" duration="6127000" />
-      <workItem from="1540243156579" duration="382000" />
+      <workItem from="1540243156579" duration="1805000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10436000" />
+    <option name="totallyTimeSpent" value="11859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2579666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -369,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson2/tcp/TCPVarSizeServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="62" column="46" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+        <state relative-caret-position="222">
+          <caret line="63" column="57" lean-forward="true" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="57" />
         </state>
       </provider>
     </entry>

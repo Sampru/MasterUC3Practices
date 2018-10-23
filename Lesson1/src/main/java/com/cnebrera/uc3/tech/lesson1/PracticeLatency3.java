@@ -111,7 +111,7 @@ public class PracticeLatency3 {
 
             // Calculate the next call time, the first time should be immediate
             long nextCallTime = System.currentTimeMillis();
-            long start, tot, extra = 0;
+            long start, tot, totCumul;
 
             // Execute the operation the required number of times
             for (int i = 0; i < NUM_EXECUTIONS; i++) {
@@ -124,12 +124,10 @@ public class PracticeLatency3 {
 
                 tot = System.currentTimeMillis() - start;
 
-                extra += tot - expectedTimeBetweenCalls;
-
-                if (extra < 0) extra = 0;
+                totCumul = tot + (start > nextCallTime ? start - nextCallTime : 0);
 
                 // Record the results
-                hgCumul.recordValue(tot + extra);
+                hgCumul.recordValue(totCumul);
                 hg.recordValue(tot);
 
                 // Calculate the next time to call execute op
