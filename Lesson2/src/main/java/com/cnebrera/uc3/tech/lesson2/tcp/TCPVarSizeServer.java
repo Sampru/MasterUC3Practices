@@ -47,7 +47,7 @@ public class TCPVarSizeServer
                 headerBuffer.clear();
 
                 // Generate random message
-                final VariableSizeMessage rndMsg = VariableSizeMessage.generateRandomMsg(8);
+                final VariableSizeMessage rndMsg = VariableSizeMessage.generateRandomMsg(80000);
 
                 // Convert to binary
                 final ByteBuffer binaryMessage = rndMsg.toBinary();
@@ -58,7 +58,7 @@ public class TCPVarSizeServer
                 // Flip the binary message prior to writing to adjust position to 0 and limit to the end of the buffer
                 binaryMessage.flip();
 
-                System.out.println("About to send msg of size " + binaryMessage.limit());
+                System.out.println("About to send msg of size " + (binaryMessage.limit() + headerBuffer.capacity()));
 
                 // Write the header with the message size
                 outputStream.write(headerBuffer.array());

@@ -4,6 +4,8 @@ import com.cnebrera.uc3.tech.lesson2.util.VariableSizeMessage;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.InetAddress;
+import java.net.Socket;
 import java.nio.ByteBuffer;
 
 /**
@@ -13,13 +15,15 @@ public class TCPVarSizeClientBigMsgs
 {
     public static void main(String argv[]) throws Exception
     {
-        // TODO 1 Create the client socket
-
-        // TODO 2 Get the input stream
-
-        while(true)
-        {
-            // TODO 3 Call send messages with the input stream
+        // Create the server connection
+        try (Socket connection = new Socket(InetAddress.getLocalHost(), 16000)) {
+            // Get the input stream
+            try (InputStream istream = connection.getInputStream()) {
+                // Read messages non stop
+                while (true) {
+                    readMessage(istream);
+                }
+            }
         }
     }
 
@@ -28,9 +32,11 @@ public class TCPVarSizeClientBigMsgs
         // The buffer to read the header
         final byte [] header = new byte[4];
 
-        // TODO 4 Wait to have at least the header
+        // Wait to have at least the header
+        while(inputStream.available() < 4);
 
-        // TODO 5 Read the header
+        // Read the header
+        inputStream.read(header);
 
         final int msgSize = ByteBuffer.wrap(header).getInt();
 
@@ -48,7 +54,8 @@ public class TCPVarSizeClientBigMsgs
             // Read the next bytes
             final int bytesToRead = msgBytes.length - numBytesRead < 128 ? (msgBytes.length - numBytesRead) : 128;
 
-            // TODO 6 read the message bytes
+            // Read the message bytes
+            numBytesRead += inputStream.read(msgBytes, numBytesRead, bytesToRead);
         }
 
         // Create the message
