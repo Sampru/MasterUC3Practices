@@ -10,13 +10,13 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class MyPublisher {
 
-    private final int MSG_PER_SEC = 1;
+    private final int MSG_PER_SEC = 100000;
 
     public void execution() {
         Aeron.Context ctx = new Aeron.Context();
         BufferBuilder bb = new BufferBuilder();
         MutableDirectBuffer buffer = bb.buffer();
-        String channel = "aeron:udp?endpoint=224.0.1.1:40456";
+        String channel = "aeron:ipc";
         long result,
                 nextOfferTime = System.currentTimeMillis(),
                 expectedTime = TimeUnit.MILLISECONDS.toMillis(Math.round(1000.0 / MSG_PER_SEC));
@@ -33,7 +33,7 @@ public abstract class MyPublisher {
                     while (nextOfferTime > System.currentTimeMillis()) ;
 
                     if (!retry) {
-                        msgBytes = getMsg().getBytes();
+                        msgBytes = generateMsg().getBytes();
                         buffer.putBytes(0, msgBytes);
                     }
 
@@ -51,14 +51,14 @@ public abstract class MyPublisher {
 
     protected abstract long insideLoopAction(Publication publication, DirectBuffer buffer, int size);
 
-    protected abstract String getMsg();
+    protected abstract String generateMsg();
 
     private boolean analyzeResult(long result) throws InterruptedException {
         boolean retry = false;
         if (result < 0) {
             if (result == Publication.BACK_PRESSURED) {
                 System.err.println("Offer failed due to back pressure");
-                Thread.sleep(TimeUnit.MILLISECONDS.toMillis(MSG_PER_SEC * 100));
+                Thread.sleep(TimeUnit.MILLISECONDS.toMillis(100));
                 retry = true;
             } else if (result == Publication.NOT_CONNECTED) {
                 System.err.println("Offer failed because publisher is not yet connected to subscriber");

@@ -11,10 +11,8 @@ import java.nio.ByteBuffer;
 /**
  * Created by cnebrera on 17/08/16.
  */
-public class TCPVarSizeClientBigMsgs
-{
-    public static void main(String argv[]) throws Exception
-    {
+public class TCPVarSizeClientBigMsgs {
+    public static void main(String argv[]) throws Exception {
         // Create the server connection
         try (Socket connection = new Socket(InetAddress.getLocalHost(), 16000)) {
             // Get the input stream
@@ -27,13 +25,12 @@ public class TCPVarSizeClientBigMsgs
         }
     }
 
-    private static void readMessage(final InputStream inputStream) throws IOException
-    {
+    private static void readMessage(final InputStream inputStream) throws IOException {
         // The buffer to read the header
-        final byte [] header = new byte[4];
+        final byte[] header = new byte[4];
 
         // Wait to have at least the header
-        while(inputStream.available() < 4);
+        while (inputStream.available() < 4) ;
 
         // Read the header
         inputStream.read(header);
@@ -43,16 +40,19 @@ public class TCPVarSizeClientBigMsgs
         System.out.println("Read MsgSize " + msgSize);
 
         // The buffer to read the message bytes
-        final byte [] msgBytes = new byte[msgSize];
+        final byte[] msgBytes = new byte[msgSize];
 
-        // Read the message in "buckets"
         int numBytesRead = 0;
+        int bytesToRead = 128;
 
-        // We need at least the header to know how long is the message
-        while(numBytesRead < msgBytes.length)
-        {
-            // Read the next bytes
-            final int bytesToRead = msgBytes.length - numBytesRead < 128 ? (msgBytes.length - numBytesRead) : 128;
+        // Keep reading until buffer is empty
+        while (numBytesRead < msgSize) {
+
+            // Check if it is the last part of the message, and it exceeds 128 bytes
+            if (msgSize - numBytesRead < bytesToRead) bytesToRead = msgSize - numBytesRead;
+
+            // Wait for the whole message to be ready
+            while (inputStream.available() < bytesToRead) ;
 
             // Read the message bytes
             numBytesRead += inputStream.read(msgBytes, numBytesRead, bytesToRead);

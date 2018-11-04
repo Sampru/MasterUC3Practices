@@ -9,6 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.10" level="project" />
     <orderEntry type="library" name="Maven: io.aeron:aeron-client:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.agrona:Agrona:0.5.3" level="project" />
     <orderEntry type="library" name="Maven: io.aeron:aeron-driver:1.0" level="project" />

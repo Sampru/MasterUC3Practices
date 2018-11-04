@@ -19,7 +19,7 @@ public class HelloPublisher extends MyPublisher {
     }
 
     @Override
-    protected String getMsg() {
+    protected String generateMsg() {
         String[] msgs = {
                 "Hello World!",
                 "¡Hola Mundo!",

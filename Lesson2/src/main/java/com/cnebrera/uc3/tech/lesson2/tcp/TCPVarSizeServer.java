@@ -11,17 +11,15 @@ import java.nio.ByteBuffer;
 /**
  * TCP server that send messages of variable size to a client
  */
-public class TCPVarSizeServer
-{
-    public static void main(String argv[]) throws Exception
-    {
+public class TCPVarSizeServer {
+    public static void main(String argv[]) throws Exception {
         // Open socket with resource
         try (ServerSocket soc = new ServerSocket(16000)) {
             // Get a client connection
             try (Socket con = soc.accept()) {
                 sendMessagesToClient(con);
             }
-        }  catch (InterruptedException | IOException e) {
+        } catch (InterruptedException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -30,11 +28,10 @@ public class TCPVarSizeServer
      * Send messages to a client given the client connection socket
      *
      * @param connectionSocket the client connection socket
-     * @throws IOException exception thrown if there is an input-output problem
+     * @throws IOException          exception thrown if there is an input-output problem
      * @throws InterruptedException exception thrown if interrupted while sleeping
      */
-    private static void sendMessagesToClient(final Socket connectionSocket) throws IOException, InterruptedException
-    {
+    private static void sendMessagesToClient(final Socket connectionSocket) throws IOException, InterruptedException {
         // Get the output stream
         try (OutputStream outputStream = connectionSocket.getOutputStream()) {
 
