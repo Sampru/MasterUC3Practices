@@ -29,6 +29,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.hdrhistogram</groupId>
+            <artifactId>HdrHistogram</artifactId>
+            <version>LATEST</version>
+        </dependency>
+        <dependency>
             <groupId>io.aeron</groupId>
             <artifactId>aeron-client</artifactId>
             <version>1.0</version>
