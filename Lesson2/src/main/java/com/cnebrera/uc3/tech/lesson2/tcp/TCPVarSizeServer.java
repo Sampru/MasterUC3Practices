@@ -12,7 +12,16 @@ import java.nio.ByteBuffer;
  * TCP server that send messages of variable size to a client
  */
 public class TCPVarSizeServer {
+    
+    private static int SIZE = 8;
+
     public static void main(String argv[]) throws Exception {
+        // Configure the message size
+        if (argv.length > 0) {
+            SIZE = Integer.parseInt(argv[0]);
+        }
+        System.out.println("Using message size: " + SIZE);
+
         // Open socket with resource
         try (ServerSocket soc = new ServerSocket(16000)) {
             // Get a client connection
@@ -44,7 +53,7 @@ public class TCPVarSizeServer {
                 headerBuffer.clear();
 
                 // Generate random message
-                final VariableSizeMessage rndMsg = VariableSizeMessage.generateRandomMsg(80000);
+                final VariableSizeMessage rndMsg = VariableSizeMessage.generateRandomMsg(SIZE);
 
                 // Convert to binary
                 final ByteBuffer binaryMessage = rndMsg.toBinary();
