@@ -34,10 +34,9 @@ public class LatencySubscriber extends MySubscriber {
         int result;
         while (true) {
             result = subscription.poll(fh, 1);
-            if (result >= 0) publishResponse(fh);
+            if (result > 0) publishResponse(fh);
             idle.idle(result);
         }
-
     }
 
     private void publishResponse(LatencySubscriberHandler fh) {
@@ -65,17 +64,19 @@ public class LatencySubscriber extends MySubscriber {
 
             while (result < 0) {
 
+                Thread.sleep(100);
                 msgBytes = generateMsg().getBytes();
                 this.getBuffer().putBytes(0, msgBytes);
 
                 result = publication.offer(this.getBuffer(), 0, msgBytes.length);
+                analyzeResult(result);
             }
 
         }
 
         @Override
         protected String generateMsg() {
-            return "2$" + this.firstSend + "$" + this.firstArrive + "$" + System.nanoTime();
+            return "2$$" + this.firstSend + "$" + this.firstArrive + "$" + System.nanoTime();
         }
 
         protected void setFirstSend(long firstSend) {

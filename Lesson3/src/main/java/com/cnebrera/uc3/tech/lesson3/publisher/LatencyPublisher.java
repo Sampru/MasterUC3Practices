@@ -13,8 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 
 public class LatencyPublisher extends MyPublisher {
-    private static long LOWEST = TimeUnit.NANOSECONDS.toNanos(120);   /* Minimum registered value */
-    private static long HIGHEST = TimeUnit.MICROSECONDS.toNanos(4200); /* Maximum registered value */
+    private static long LOWEST = TimeUnit.NANOSECONDS.toNanos(600000);   /* Minimum registered value */
+    private static long HIGHEST = TimeUnit.MILLISECONDS.toNanos(11000); /* Maximum registered value */
     private static int SIGNIF = 2; /* Significance, 2 will allow to have pretty accurate results */
     private static double SCALE = 1; /* Scale from ns to ms*/
     private Histogram hg, hgCumul;
@@ -24,6 +24,8 @@ public class LatencyPublisher extends MyPublisher {
         super();
         this.hg = new Histogram(LOWEST, HIGHEST, SIGNIF);
         this.hg.setAutoResize(true);
+        this.hgCumul = new Histogram(LOWEST, HIGHEST, SIGNIF);
+        this.hgCumul.setAutoResize(true);
         this.rs = new ResponseSubscriber();
     }
 
@@ -31,6 +33,8 @@ public class LatencyPublisher extends MyPublisher {
         super(channel);
         this.hg = new Histogram(LOWEST, HIGHEST, SIGNIF);
         this.hg.setAutoResize(true);
+        this.hgCumul = new Histogram(LOWEST, HIGHEST, SIGNIF);
+        this.hgCumul.setAutoResize(true);
         this.rs = new ResponseSubscriber(channel);
     }
 
@@ -44,13 +48,12 @@ public class LatencyPublisher extends MyPublisher {
         long nextOfferTime = System.nanoTime(),
                 expectedTime = Math.round(1000.0 / MSG_PER_SEC),
                 result;
-        int records = 0;
         byte[] msgBytes = "".getBytes();
         boolean retry = false;
 
-        while (records < 100) {
+        while (this.hg.getTotalCount() < 100) {
 
-            while (nextOfferTime > System.nanoTime()) ;
+            while (nextOfferTime > System.nanoTime());
 
             if (!retry) {
                 msgBytes = generateMsg().getBytes();
@@ -61,7 +64,6 @@ public class LatencyPublisher extends MyPublisher {
             if (result >= 0) {
                 this.rs.execution();
                 storeTime(nextOfferTime);
-                records++;
             }
             retry = analyzeResult(result);
 
@@ -74,7 +76,7 @@ public class LatencyPublisher extends MyPublisher {
 
     @Override
     protected String generateMsg() {
-        return "1$" + String.valueOf(System.nanoTime());
+        return "1$$" + String.valueOf(System.nanoTime());
     }
 
     private void storeTime(long nextOfferTime) {
@@ -84,6 +86,7 @@ public class LatencyPublisher extends MyPublisher {
 
         hg.recordValue(total);
         hgCumul.recordValue(totalCumul);
+        lh.reset();
     }
 
     private class ResponseSubscriber extends MySubscriber {
@@ -103,7 +106,7 @@ public class LatencyPublisher extends MyPublisher {
         @Override
         protected void subscriberAction(Subscription subscription) {
             IdleStrategy idle = new BusySpinIdleStrategy();
-            while (this.lph.isFilled()) {
+            while (!this.lph.isFilled()) {
                 int result = subscription.poll(this.lph, 1);
                 idle.idle(result);
             }

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class MyPublisher {
 
-    protected final int MSG_PER_SEC = 100000;
+    protected final int MSG_PER_SEC = 100;
     private MutableDirectBuffer buffer;
     private String channel;
     private final BufferBuilder bb = new BufferBuilder();

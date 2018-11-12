@@ -20,7 +20,8 @@ public class LatencyPublisherHandler implements FragmentHandler {
         if (msg.startsWith("2$")) {
             this.filled = true;
             secondArrive = System.nanoTime();
-            String[] times = msg.replace("2$", "").split("[$]");
+            System.out.println(msg);
+            String[] times = msg.replace("2$$", "").split("[$]");
             firstSend = Long.valueOf(times[0]);
             firstArrive = Long.valueOf(times[1]);
             secondSend = Long.valueOf(times[2]);
@@ -47,5 +48,13 @@ public class LatencyPublisherHandler implements FragmentHandler {
 
     public boolean isFilled() {
         return filled;
+    }
+
+    public void reset() {
+        firstSend = 0;
+        firstArrive = 0;
+        secondSend = 0;
+        secondArrive = 0;
+        filled = false;
     }
 }

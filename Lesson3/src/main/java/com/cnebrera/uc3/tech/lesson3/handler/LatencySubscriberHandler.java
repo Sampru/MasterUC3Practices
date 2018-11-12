@@ -15,7 +15,7 @@ public class LatencySubscriberHandler implements FragmentHandler {
         String msg = new String(bytes);
         if (msg.startsWith("1$")) {
             firstArrive = System.nanoTime();
-            firstSend = Long.valueOf(msg.replace("1$", ""));
+            firstSend = Long.valueOf(msg.replace("1$$", ""));
             System.out.println("New timestamp received:");
             System.out.println("\t" + firstSend);
         }
@@ -28,4 +28,5 @@ public class LatencySubscriberHandler implements FragmentHandler {
     public long getFirstArrive() {
         return firstArrive;
     }
+
 }

@@ -2,23 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08884c69-d474-4cd0-b855-ff58d4a1d3c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MySubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MySubscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/HelloPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/HelloPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/HelloSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/HelloSubscriber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/handler/LatencyHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Lesson3-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Lesson3-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/implementables/MySubscriber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/implementables/MySubscriber.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/publisher/HelloPublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/publisher/HelloPublisher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/subscriber/HelloSubscriber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/subscriber/HelloSubscriber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber$ResponsePublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber$ResponsePublisher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson4/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +28,7 @@
     <session id="-599527747">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="3" />
@@ -47,28 +44,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="6" />
-          <entry key="java" value="21" />
+          <entry key="class" value="7" />
+          <entry key="java" value="24" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
-          <entry key="JAVA" value="21" />
+          <entry key="CLASS" value="7" />
+          <entry key="JAVA" value="24" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="26" />
-          <entry key="java" value="5842" />
+          <entry key="java" value="6438" />
           <entry key="xml" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5842" />
+          <entry key="JAVA" value="6438" />
           <entry key="PLAIN_TEXT" value="26" />
           <entry key="XML" value="98" />
         </counts>
@@ -76,107 +73,107 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="76" column="40" lean-forward="true" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1195#1196#0" expanded="true" />
-                <element signature="e#1226#1227#0" expanded="true" />
-                <element signature="e#1279#1280#0" expanded="true" />
-                <element signature="e#1317#1318#0" expanded="true" />
-                <element signature="e#2593#2594#0" expanded="true" />
-                <element signature="e#2643#2644#0" expanded="true" />
-                <element signature="e#2702#2703#0" expanded="true" />
-                <element signature="e#2756#2757#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1179#1180#0" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1247#1248#0" expanded="true" />
-                <element signature="e#1281#1282#0" expanded="true" />
-                <element signature="e#1316#1317#0" expanded="true" />
-                <element signature="e#1349#1350#0" expanded="true" />
-                <element signature="e#1386#1387#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
-                <element signature="e#1525#1526#0" expanded="true" />
-                <element signature="e#1553#1554#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="46" lean-forward="true" selection-start-column="46" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MySubscriber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" selection-start-column="33" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/driver/BackOffMediaDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="435">
+                  <caret line="53" column="47" lean-forward="true" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1263#1264#0" expanded="true" />
+                    <element signature="e#1295#1296#0" expanded="true" />
+                    <element signature="e#1331#1332#0" expanded="true" />
+                    <element signature="e#1365#1366#0" expanded="true" />
+                    <element signature="e#1400#1401#0" expanded="true" />
+                    <element signature="e#1433#1434#0" expanded="true" />
+                    <element signature="e#1470#1471#0" expanded="true" />
+                    <element signature="e#1505#1506#0" expanded="true" />
+                    <element signature="e#1538#1539#0" expanded="true" />
+                    <element signature="e#1567#1568#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-165">
+                  <caret line="31" selection-start-line="31" selection-end-line="31" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MySubscriber.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="33" selection-start-column="33" selection-end-column="33" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/driver/BackOffMediaDriver.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="30">
+                  <caret line="2" selection-start-line="2" selection-end-line="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -205,14 +202,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/MySubscriber.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MySubscriber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/HelloSubscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/HelloPublisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java" />
       </list>
     </option>
   </component>
@@ -457,12 +454,12 @@
       <workItem from="1541941514284" duration="2861000" />
       <workItem from="1541951985372" duration="425000" />
       <workItem from="1541952441064" duration="4497000" />
-      <workItem from="1541963428957" duration="7531000" />
+      <workItem from="1541963428957" duration="14959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37101000" />
+    <option name="totallyTimeSpent" value="44529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -475,9 +472,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="2560" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16242038" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16242038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -485,7 +481,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286026" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39847162" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39847162" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294702" />
@@ -539,18 +535,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java</url>
-          <line>12</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/driver/LowLatencyMediaDriver.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -600,16 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/HelloPublisher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -627,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/aeron/aeron-client/1.0/aeron-client-1.0.jar!/io/aeron/logbuffer/TermReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/aeron/aeron-client/1.0/aeron-client-1.0.jar!/io/aeron/Image.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -641,10 +608,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/aeron/aeron-client/1.0/aeron-client-1.0.jar!/io/aeron/logbuffer/TermReader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        <state relative-caret-position="239">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/implementables/MyPublisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-165">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -653,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencySubscriberHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="46" lean-forward="true" selection-start-column="46" selection-end-column="46" />
+        <state relative-caret-position="300">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -663,38 +637,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/handler/LatencyPublisherHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state>
+          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1179#1180#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1400#1401#0" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/publisher/LatencyPublisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="53" column="47" lean-forward="true" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson3/subscriber/LatencySubscriber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="76" column="40" lean-forward="true" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
+        <state relative-caret-position="180">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#2593#2594#0" expanded="true" />
-            <element signature="e#2643#2644#0" expanded="true" />
-            <element signature="e#2702#2703#0" expanded="true" />
-            <element signature="e#2756#2757#0" expanded="true" />
           </folding>
         </state>
       </provider>
