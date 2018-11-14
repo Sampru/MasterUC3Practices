@@ -1,7 +1,6 @@
 package com.cnebrera.uc3.tech.lesson3.subscriber;
 
 import com.cnebrera.uc3.tech.lesson3.handler.HelloHandler;
-import com.cnebrera.uc3.tech.lesson3.implementables.MySubscriber;
 import io.aeron.Subscription;
 import io.aeron.logbuffer.FragmentHandler;
 import org.agrona.concurrent.BusySpinIdleStrategy;

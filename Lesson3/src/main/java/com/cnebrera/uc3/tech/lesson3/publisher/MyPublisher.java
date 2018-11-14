@@ -1,4 +1,4 @@
-package com.cnebrera.uc3.tech.lesson3.implementables;
+package com.cnebrera.uc3.tech.lesson3.publisher;
 
 import io.aeron.Aeron;
 import io.aeron.BufferBuilder;
@@ -7,19 +7,19 @@ import org.agrona.MutableDirectBuffer;
 
 import java.util.concurrent.TimeUnit;
 
-public abstract class MyPublisher {
+public abstract class MyPublisher implements Runnable {
 
-    protected final int MSG_PER_SEC = 100;
+    final int MSG_PER_SEC = 100;
     private MutableDirectBuffer buffer;
     private String channel;
     private final BufferBuilder bb = new BufferBuilder();
 
-    public MyPublisher() {
+    MyPublisher() {
         this.channel = "aeron:ipc";
         buffer = bb.buffer();
     }
 
-    public MyPublisher(String channel) {
+    MyPublisher(String channel) {
         this.channel = channel;
         buffer = bb.buffer();
     }
@@ -41,7 +41,7 @@ public abstract class MyPublisher {
 
     protected abstract String generateMsg();
 
-    protected boolean analyzeResult(long result) throws InterruptedException {
+    boolean analyzeResult(long result) throws InterruptedException {
         boolean retry = false;
         if (result < 0) {
             if (result == Publication.BACK_PRESSURED) {
@@ -64,8 +64,12 @@ public abstract class MyPublisher {
         return retry;
     }
 
-    protected MutableDirectBuffer getBuffer() {
+    MutableDirectBuffer getBuffer() {
         return this.buffer;
     }
 
+    @Override
+    public void run() {
+        this.execution();
+    }
 }

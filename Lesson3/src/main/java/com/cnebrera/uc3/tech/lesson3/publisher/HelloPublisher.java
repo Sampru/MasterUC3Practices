@@ -1,6 +1,5 @@
 package com.cnebrera.uc3.tech.lesson3.publisher;
 
-import com.cnebrera.uc3.tech.lesson3.implementables.MyPublisher;
 import io.aeron.Publication;
 
 import java.util.Random;

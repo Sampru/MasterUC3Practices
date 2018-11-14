@@ -1,21 +1,21 @@
-package com.cnebrera.uc3.tech.lesson3.implementables;
+package com.cnebrera.uc3.tech.lesson3.subscriber;
 
 import io.aeron.Aeron;
 import io.aeron.Subscription;
 
-public abstract class MySubscriber {
+public abstract class MySubscriber implements Runnable {
 
     private String channel;
 
-    public MySubscriber() {
+    MySubscriber() {
         this.channel = "aeron:ipc";
     }
 
-    public MySubscriber(String channel) {
+    MySubscriber(String channel) {
         this.channel = channel;
     }
 
-    public void execution() {
+    void execution() {
         Aeron.Context ctx = new Aeron.Context();
         int streamId = 2;
 
@@ -27,4 +27,9 @@ public abstract class MySubscriber {
     }
 
     protected abstract void subscriberAction(Subscription subscription);
+
+    @Override
+    public void run() {
+        this.execution();
+    }
 }
