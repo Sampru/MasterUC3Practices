@@ -6,6 +6,7 @@ import io.aeron.Publication;
 public class SenderPublisher extends MyPublisher {
 
     private long nextOfferTime;
+    private int msgPerSec = 1000;
 
     public SenderPublisher() {
         super();
@@ -14,10 +15,18 @@ public class SenderPublisher extends MyPublisher {
     public SenderPublisher(String channel) {
         super(channel);
     }
+    public SenderPublisher(int msgPerSec) {
+        super();
+        this.msgPerSec = msgPerSec;
+    }
+    public SenderPublisher(String channel, int msgPerSec) {
+        super(channel);
+        this.msgPerSec = msgPerSec;
+    }
 
     @Override
     protected void publisherAction(Publication publication) throws InterruptedException {
-        long expectedTime = Math.round(1000.0 / MSG_PER_SEC),
+        long expectedTime = Math.round(1000.0 / msgPerSec),
                 result;
         int msgCount = 0;
         byte[] msgBytes = "".getBytes();
@@ -25,7 +34,7 @@ public class SenderPublisher extends MyPublisher {
 
         nextOfferTime = System.nanoTime();
 
-        while (msgCount < 100) {
+        while (msgCount < 1000) {
 
             while (nextOfferTime > System.nanoTime()) ;
 

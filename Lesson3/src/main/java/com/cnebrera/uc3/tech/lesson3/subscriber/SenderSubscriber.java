@@ -43,7 +43,7 @@ public class SenderSubscriber extends MySubscriber implements Observer {
     protected void subscriberAction(Subscription subscription) {
         IdleStrategy idle = new BusySpinIdleStrategy();
 
-        while (hg.getTotalCount() < 100) {
+        while (hg.getTotalCount() < 1000) {
             int result = subscription.poll(this.lph, 1);
             idle.idle(result);
         }

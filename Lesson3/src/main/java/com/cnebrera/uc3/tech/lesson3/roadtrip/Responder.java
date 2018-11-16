@@ -9,14 +9,13 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Responder {
-    private AtomicInteger producerIndex, consumerIndex, msgCount;
+    private AtomicInteger producerIndex, consumerIndex;
     private String[] buffer;
     private final int BUFFER_SIZE = 60;
 
     private Responder() {
         this.producerIndex = new AtomicInteger();
         this.consumerIndex = new AtomicInteger();
-        this.msgCount = new AtomicInteger();
         this.buffer = new String[this.BUFFER_SIZE];
     }
 
