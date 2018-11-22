@@ -10,11 +10,11 @@ import org.agrona.concurrent.IdleStrategy;
 public class HelloSubscriber extends MySubscriber {
 
     private HelloSubscriber() {
-        super();
+        super(2);
     }
 
     private HelloSubscriber(String channel) {
-        super(channel);
+        super(channel, 2);
     }
 
     public static void main(String[] args) {
@@ -27,7 +27,6 @@ public class HelloSubscriber extends MySubscriber {
         IdleStrategy idle = new BusySpinIdleStrategy();
         FragmentHandler fh = new HelloHandler();
         while (true) {
-
             int result = subscription.poll(fh, 1);
             idle.idle(result);
         }

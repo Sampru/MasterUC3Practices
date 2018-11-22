@@ -3,16 +3,18 @@ package com.cnebrera.uc3.tech.lesson3.publisher;
 import com.cnebrera.uc3.tech.lesson3.roadtrip.Responder;
 import io.aeron.Publication;
 
+import java.nio.ByteBuffer;
+
 public class ResponderPublisher extends MyPublisher {
     private Responder responder;
 
     public ResponderPublisher(Responder responder) {
-        super();
+        super(3);
         this.responder = responder;
     }
 
     public ResponderPublisher(Responder responder, String channel) {
-        super(channel);
+        super(channel, 3);
         this.responder = responder;
     }
 
@@ -20,29 +22,28 @@ public class ResponderPublisher extends MyPublisher {
     protected void publisherAction(Publication publication) throws InterruptedException {
         long result;
         boolean retry = false;
-        byte[] msgBytes = "".getBytes();
 
         while (true) {
 
             if (!retry) {
-                msgBytes = generateMsg().getBytes();
-                this.getBuffer().putBytes(0, msgBytes);
+                generateMsg();
+                this.directBuffer.wrap(this.buffer);
             }
 
-            result = publication.offer(this.getBuffer(), 0, msgBytes.length);
+            result = publication.offer(this.directBuffer, 0, this.buffer.limit());
             retry = analyzeResult(result);
         }
 
     }
 
     @Override
-    protected String generateMsg() {
-        String msg = "";
+    protected void generateMsg() {
+        ByteBuffer msg = null;
 
-        while (msg.isEmpty()) {
+        while (msg == null) {
             msg = responder.readNextMessage();
 
-            if (msg.equals("")){
+            if (msg == null) {
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -51,6 +52,7 @@ public class ResponderPublisher extends MyPublisher {
             }
         }
 
-        return msg + "$" + System.nanoTime();
+        this.buffer.put(msg);
+        this.buffer.putLong(32, System.nanoTime());
     }
 }

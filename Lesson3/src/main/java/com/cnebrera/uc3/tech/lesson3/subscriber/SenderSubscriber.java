@@ -19,7 +19,7 @@ public class SenderSubscriber extends MySubscriber implements Observer {
     private static int SIGNIF = 2; /* Significance, 2 will allow to have pretty accurate results */
 
     public SenderSubscriber() {
-        super();
+        super(3);
         this.hg = new Histogram(LOWEST, HIGHEST, SIGNIF);
         this.hg.setAutoResize(true);
         this.hgCumul = new Histogram(LOWEST, HIGHEST, SIGNIF);
@@ -30,7 +30,7 @@ public class SenderSubscriber extends MySubscriber implements Observer {
     }
 
     public SenderSubscriber(String channel) {
-        super(channel);
+        super(channel, 3);
         this.hg = new Histogram(LOWEST, HIGHEST, SIGNIF);
         this.hg.setAutoResize(true);
         this.hgCumul = new Histogram(LOWEST, HIGHEST, SIGNIF);
