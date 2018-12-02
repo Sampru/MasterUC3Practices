@@ -2,8 +2,7 @@ package com.cnebrera.uc3.tech.lesson3.publisher;
 
 import com.cnebrera.uc3.tech.lesson3.roadtrip.Responder;
 import io.aeron.Publication;
-
-import java.nio.ByteBuffer;
+import org.agrona.MutableDirectBuffer;
 
 public class ResponderPublisher extends MyPublisher {
     private Responder responder;
@@ -27,10 +26,9 @@ public class ResponderPublisher extends MyPublisher {
 
             if (!retry) {
                 generateMsg();
-                this.directBuffer.wrap(this.buffer);
             }
 
-            result = publication.offer(this.directBuffer, 0, this.buffer.limit());
+            result = publication.offer(this.directBuffer, 0, this.directBuffer.capacity());
             retry = analyzeResult(result);
         }
 
@@ -38,12 +36,12 @@ public class ResponderPublisher extends MyPublisher {
 
     @Override
     protected void generateMsg() {
-        ByteBuffer msg = null;
+        this.directBuffer = null;
 
-        while (msg == null) {
-            msg = responder.readNextMessage();
+        while (this.directBuffer == null) {
+            this.directBuffer = (MutableDirectBuffer) responder.readNextMessage();
 
-            if (msg == null) {
+            if (this.directBuffer == null) {
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -52,7 +50,6 @@ public class ResponderPublisher extends MyPublisher {
             }
         }
 
-        this.buffer.put(msg);
-        this.buffer.putLong(32, System.nanoTime());
+        this.directBuffer.putLong(32, System.nanoTime());
     }
 }

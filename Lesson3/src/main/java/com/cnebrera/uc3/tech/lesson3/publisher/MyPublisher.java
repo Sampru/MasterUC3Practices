@@ -5,29 +5,28 @@ import io.aeron.BufferBuilder;
 import io.aeron.Publication;
 import org.agrona.MutableDirectBuffer;
 
-import java.nio.ByteBuffer;
 import java.util.concurrent.TimeUnit;
 
 public abstract class MyPublisher implements Runnable {
 
     final int MSG_PER_SEC = 100;
+    final BufferBuilder bb = new BufferBuilder();
     private String channel;
     private int streamId;
     MutableDirectBuffer directBuffer;
-    ByteBuffer buffer;
-    private final BufferBuilder bb = new BufferBuilder();
+    //ByteBuffer buffer;
 
     MyPublisher(int streamId) {
         this.channel = "aeron:ipc";
         this.streamId = streamId;
-        this.buffer = ByteBuffer.allocate(128);
+        //this.buffer = ByteBuffer.allocate(128);
         this.directBuffer = bb.buffer();
     }
 
     MyPublisher(String channel, int streamId) {
         this.channel = channel;
         this.streamId = streamId;
-        this.buffer = ByteBuffer.allocate(128);
+        //this.buffer = ByteBuffer.allocate(128);
         this.directBuffer = bb.buffer();
     }
 

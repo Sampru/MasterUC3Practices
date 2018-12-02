@@ -18,12 +18,10 @@ public class SenderHandler extends Observable implements FragmentHandler {
     public void onFragment(DirectBuffer directBuffer, int i, int i1, Header header) {
         this.secondArrive = System.nanoTime();
 
-        ByteBuffer bb = directBuffer.byteBuffer();
-
-        this.nextOfferTime = bb.getLong(0);
-        this.firstSend = bb.getLong(10);
-        this.firstArrive = bb.getLong(20);
-        this.secondSend = bb.getLong(30);
+        this.nextOfferTime = directBuffer.getLong(0);
+        this.firstSend = directBuffer.getLong(10);
+        this.firstArrive = directBuffer.getLong(20);
+        this.secondSend = directBuffer.getLong(30);
 
         this.setChanged();
         this.notifyObservers();

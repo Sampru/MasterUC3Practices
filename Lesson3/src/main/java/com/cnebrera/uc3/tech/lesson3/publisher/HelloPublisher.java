@@ -35,10 +35,9 @@ public class HelloPublisher extends MyPublisher {
 
             if (!retry) {
                 generateMsg();
-                this.directBuffer.wrap(this.buffer);
             }
 
-            result = publication.offer(this.directBuffer, 0, this.buffer.limit());
+            result = publication.offer(this.directBuffer, 0, this.directBuffer.capacity());
 
             retry = analyzeResult(result);
 
@@ -57,7 +56,7 @@ public class HelloPublisher extends MyPublisher {
         };
 
         byte[] msg = msgs[rnd.nextInt(msgs.length)].getBytes();
-        this.buffer = ByteBuffer.allocate(msg.length);
-        this.buffer.put(msg);
+        this.directBuffer = this.bb.buffer();
+        this.directBuffer.putBytes(0, msg);
     }
 }

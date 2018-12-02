@@ -41,10 +41,9 @@ public class SenderPublisher extends MyPublisher {
 
             if (!retry) {
                 generateMsg();
-                this.directBuffer.wrap(this.buffer);
             }
 
-            result = publication.offer(this.directBuffer, 0, this.buffer.limit());
+            result = publication.offer(this.directBuffer, 0, this.directBuffer.capacity());
 
             if (result >= 0) msgCount++;
 
@@ -57,8 +56,8 @@ public class SenderPublisher extends MyPublisher {
 
     @Override
     protected void generateMsg() {
-        this.buffer.putLong(8, this.nextOfferTime);
-        this.buffer.putLong(16, System.nanoTime());
+        this.directBuffer.putLong(8, this.nextOfferTime);
+        this.directBuffer.putLong(16, System.nanoTime());
     }
 
 }
