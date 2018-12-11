@@ -18,8 +18,7 @@ public class P1VolumeAdder {
         config.getNetworkConfig().getJoin().getTcpIpConfig().addMember("localhost").setEnabled(true);
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
 
-        HazelcastInstance client = Hazelcast.newHazelcastInstance( config );
-
+        HazelcastInstance client = Hazelcast.newHazelcastInstance(config);
 
 
         IMap<String, MarketOrder> mapCustomers = client.getMap("ordenesMercado");
@@ -27,19 +26,19 @@ public class P1VolumeAdder {
         mapCustomers.clear();
 
         //Añade 1000 ordenes a la cache
-        for (int i=0; i<1000; ++i) {
-            MarketOrder order = new MarketOrder("BBVA",400, 642);
-            MarketOrder orderRep = new MarketOrder("Intel",500,3400);
-            mapCustomers.put("Ibex35OrderID_"+i, order);
-            mapCustomers.put("DowJonesOrderID_"+i, orderRep);
+        for (int i = 0; i < 1000; ++i) {
+            MarketOrder order = new MarketOrder("BBVA", 400, 642);
+            MarketOrder orderRep = new MarketOrder("Intel", 500, 3400);
+            mapCustomers.put("Ibex35OrderID_" + i, order);
+            mapCustomers.put("DowJonesOrderID_" + i, orderRep);
         }
 
         //Actualiza 100 ordenes
-        for (int i=0; i<100; ++i) {
-            MarketOrder order = new MarketOrder("BBVA",555, 642);
-            MarketOrder orderRep = new MarketOrder("Intel",1000,3400);
-            mapCustomers.put("Ibex35OrderID_"+i, order);
-            mapCustomers.put("DowJonesOrderID_"+i, orderRep);
+        for (int i = 0; i < 100; ++i) {
+            MarketOrder order = new MarketOrder("BBVA", 555, 642);
+            MarketOrder orderRep = new MarketOrder("Intel", 1000, 3400);
+            mapCustomers.put("Ibex35OrderID_" + i, order);
+            mapCustomers.put("DowJonesOrderID_" + i, orderRep);
         }
 
         client.shutdown();
