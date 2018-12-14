@@ -6,22 +6,16 @@ import com.google.protobuf.InvalidProtocolBufferException;
 /**
  * Created by alexvarela on 23/11/16.
  */
-public class ProtoSerializer implements Serializer<Lesson9.ReferenceData, byte[]>
-{
-    public byte[] serialize(Lesson9.ReferenceData referenceData)
-    {
+public class ProtoSerializer implements Serializer<Lesson9.ReferenceData, byte[]> {
+    public byte[] serialize(Lesson9.ReferenceData referenceData) {
         return referenceData.toByteArray();
     }
 
-    public Lesson9.ReferenceData deserialize(byte[] rawData)
-    {
+    public Lesson9.ReferenceData deserialize(byte[] rawData) {
         Lesson9.ReferenceData referenceData = null;
-        try
-        {
+        try {
             referenceData = Lesson9.ReferenceData.parseFrom(rawData);
-        }
-        catch (InvalidProtocolBufferException e)
-        {
+        } catch (InvalidProtocolBufferException e) {
             System.err.println(e);
         }
         return referenceData;
