@@ -5,16 +5,15 @@ package com.cnebrera.uc3.tech.lesson9.proto;
 option java_package = "com.cnebrera.uc3.tech.lesson9.proto";
 option java_outer_classname = "Lesson9";
 
-
-
 message Instrument {
-
+    int32 instrumentId = 1;
+    string symbol = 2;
 }
 
 message ReferenceData {
-
-
-   repeated Instrument instrument = 1;
+    int32 marketId = 1;
+    string algorithmIdentifier = 2;
+    repeated Instrument instrument = 3;
 
 }
 

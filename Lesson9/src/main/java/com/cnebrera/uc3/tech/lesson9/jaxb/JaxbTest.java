@@ -30,9 +30,9 @@ public class JaxbTest {
 
         ReferenceData referenceData = jaxbSerializer.deserialize(str);
 
-        LOGGER.debug("[Practica 1] Size of referenceData instrument list {}", referenceData.getListOfInstruments().size());
-        LOGGER.debug("[Practica 1] Algorithm identifier{}", referenceData.getAlgorithmIdentifier());
-        LOGGER.debug("[Practica 1] Algorithm marketId{}", referenceData.getMarketId());
+        LOGGER.debug("[Practica 1] Size of referenceData instrument list: {}", referenceData.getListOfInstruments().size());
+        LOGGER.debug("[Practica 1] Algorithm identifier: {}", referenceData.getAlgorithmIdentifier());
+        LOGGER.debug("[Practica 1] Algorithm marketId: {}", referenceData.getMarketId());
     }
 }
 

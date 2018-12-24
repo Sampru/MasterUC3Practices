@@ -3,7 +3,6 @@ package com.cnebrera.uc3.tech.lesson9.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.xml.bind.annotation.*;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,7 +31,7 @@ public class ReferenceData {
     /**
      * a List with the Instruments information
      **/
-    @XmlElement(name = "instrument")
+    @XmlElement(name = "instrument", namespace = "http:/tech.uc3.cnebrera.com/lesson9")
     @JsonProperty(value = "list_of_instruments")
     private List<Instrument> instruments;
 

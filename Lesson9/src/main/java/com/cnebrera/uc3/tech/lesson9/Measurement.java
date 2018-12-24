@@ -19,7 +19,7 @@ import java.nio.file.Paths;
  * Main Class that measure the performance
  */
 public class Measurement {
-    private static long NUM_ITERATIONS = 100000000;
+    private static long NUM_ITERATIONS = 100000;
     /**
      * a org.slf4j.Logger with the instance of this class given by org.slf4j.LoggerFactory
      */
@@ -51,7 +51,13 @@ public class Measurement {
 
         Lesson9.ReferenceData.Builder referenceDataBuilder = Lesson9.ReferenceData.newBuilder();
 
-        // TODO set the parameters in the builder using the values read in referenceData from JSON to ensure both have the same contents
+        // Set the parameters in the builder using the values read in referenceData from JSON to ensure both have the same contents
+        referenceDataBuilder.setMarketId(referenceData.getMarketId())
+                .setAlgorithmIdentifier(referenceData.getAlgorithmIdentifier());
+        referenceData.getListOfInstruments().forEach(i -> referenceDataBuilder.addInstrument(Lesson9.Instrument.newBuilder()
+                .setInstrumentId(i.getInstrumentId())
+                .setSymbol(i.getSymbol()))
+        );
 
         //Test Proto
         Lesson9.ReferenceData referenceDataProto = referenceDataBuilder.build();
@@ -59,6 +65,9 @@ public class Measurement {
 
         //Test Kryo
         LOGGER.debug("[Practica 4] Kryo Serializer [{}] ", referenceData.equals(kryoSerializer.deserialize(kryoSerializer.serialize(referenceData))));
+
+        // Heat up
+        heatUp(referenceData, referenceDataProto, str, jsonSerializer.serialize(referenceData), kryoSerializer.serialize(referenceData), referenceDataProto.toByteArray());
 
         //Test performance serialization
         testPerformanceSerialization(referenceData, referenceDataProto);
@@ -71,105 +80,151 @@ public class Measurement {
     }
 
     private static void testPerformanceSerialization(ReferenceData referenceData, Lesson9.ReferenceData referenceDataProto) {
-        //JAXB serialization
+        byte[] jaxbOut = {},
+                jsonOut = {},
+                kryoOut = {},
+                protoOut = {};
+        // JAXB serialization
         long jaxbSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization
+            jaxbOut = jaxbSerializer.serialize(referenceData).getBytes();
         }
         long jaxbSerializationFin = System.nanoTime();
         long meanJaxb = (jaxbSerializationFin - jaxbSerializationIni) / NUM_ITERATIONS;
 
-        //Json serialization
+        // Json serialization
         long jsonSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization
+            jsonOut = jsonSerializer.serialize(referenceData).getBytes();
         }
         long jsonSerializationFin = System.nanoTime();
         long meanJson = (jsonSerializationFin - jsonSerializationIni) / NUM_ITERATIONS;
 
-        //Protocol Buffers serialization
+        // Protocol Buffers serialization
         long protoSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization
+            protoOut = protoSerializer.serialize(referenceDataProto);
         }
         long protoSerializationFin = System.nanoTime();
         long meanProto = (protoSerializationFin - protoSerializationIni) / NUM_ITERATIONS;
 
-        //Kryo serialization
+        // Kryo serialization
         long kryoSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization
+            kryoOut = kryoSerializer.serialize(referenceData);
         }
         long kryoSerializationFin = System.nanoTime();
         long meanKryo = (kryoSerializationFin - kryoSerializationIni) / NUM_ITERATIONS;
+
+        System.out.println("/*********************\\ Serialization /*********************\\");
+        String format = "%-3s:\t\tTime : %-15dSize : %d%n";
+        System.out.printf(format, "JAXB", meanJaxb, jaxbOut.length);
+        System.out.printf(format, "JSON", meanJson, jsonOut.length);
+        System.out.printf(format, "Proto", meanProto, protoOut.length);
+        System.out.printf(format, "Kryo", meanKryo, kryoOut.length);
     }
 
-    private static void testPerformanceDeSerialization(String jaxbSerialize, String jsonSerlize, byte[] kryoSerialize, byte[] protoSerialize) {
-        //JAXB serialization
+    private static void testPerformanceDeSerialization(String jaxbSerialize, String jsonSerialize, byte[] kryoSerialize, byte[] protoSerialize) {
+        // JAXB deserialization
         long jaxbSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWithDeserialization
+            jaxbSerializer.deserialize(jaxbSerialize);
         }
         long jaxbSerializationFin = System.nanoTime();
         long meanJaxb = (jaxbSerializationFin - jaxbSerializationIni) / NUM_ITERATIONS;
 
-        //Json serialization
+        // Json deserialization
         long jsonSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWithDeserialization
+            jsonSerializer.deserialize(jsonSerialize);
         }
         long jsonSerializationFin = System.nanoTime();
         long meanJson = (jsonSerializationFin - jsonSerializationIni) / NUM_ITERATIONS;
 
-        //Protocol Buffers serialization
+        // Protocol Buffers serialization
         long protoSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWithDeserialization
+            protoSerializer.deserialize(protoSerialize);
         }
         long protoSerializationFin = System.nanoTime();
         long meanProto = (protoSerializationFin - protoSerializationIni) / NUM_ITERATIONS;
 
-        //Kryo serialization
+        // Kryo serialization
         long kryoSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWithDeserialization
+            kryoSerializer.deserialize(kryoSerialize);
         }
         long kryoSerializationFin = System.nanoTime();
         long meanKryo = (kryoSerializationFin - kryoSerializationIni) / NUM_ITERATIONS;
+
+
+        System.out.println("/*********************\\ Deserialization /*********************\\");
+        String format = "%-3s:\t\tTime : %d%n";
+        System.out.printf(format, "JAXB", meanJaxb);
+        System.out.printf(format, "JSON", meanJson);
+        System.out.printf(format, "Proto", meanProto);
+        System.out.printf(format, "Kryo", meanKryo);
     }
 
     private static void testPerformanceSerializationAndDeserialization(ReferenceData referenceData, Lesson9.ReferenceData referenceDataProto) {
-        //JAXB serialization
+        // JAXB serialization
         long jaxbSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization And Deserialization
+            jaxbSerializer.deserialize(jaxbSerializer.serialize(referenceData));
         }
         long jaxbSerializationFin = System.nanoTime();
         long meanJaxb = (jaxbSerializationFin - jaxbSerializationIni) / NUM_ITERATIONS;
 
-        //Json serialization
+        // Json serialization
         long jsonSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization And Deserialization
+            jsonSerializer.deserialize(jsonSerializer.serialize(referenceData));
         }
         long jsonSerializationFin = System.nanoTime();
         long meanJson = (jsonSerializationFin - jsonSerializationIni) / NUM_ITERATIONS;
 
-        //Protocol Buffers serialization
+        // Protocol Buffers serialization
         long protoSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization And Deserialization
+            protoSerializer.deserialize(protoSerializer.serialize(referenceDataProto));
         }
         long protoSerializationFin = System.nanoTime();
         long meanProto = (protoSerializationFin - protoSerializationIni) / NUM_ITERATIONS;
 
-        //Kryo serialization
+        // Kryo serialization
         long kryoSerializationIni = System.nanoTime();
         for (int i = 0; i < NUM_ITERATIONS; i++) {
-            //TODO fillWith Serialization And Deserialization
+            kryoSerializer.deserialize(kryoSerializer.serialize(referenceData));
         }
         long kryoSerializationFin = System.nanoTime();
         long meanKryo = (kryoSerializationFin - kryoSerializationIni) / NUM_ITERATIONS;
+
+        System.out.println("/*********************\\ Both /*********************\\");
+        String format = "%-3s:\t\tTime : %d%n";
+        System.out.printf(format, "JAXB", meanJaxb);
+        System.out.printf(format, "JSON", meanJson);
+        System.out.printf(format, "Proto", meanProto);
+        System.out.printf(format, "Kryo", meanKryo);
+    }
+
+    private static void heatUp(ReferenceData referenceData, Lesson9.ReferenceData referenceDataProto, String jaxbSerialize, String jsonSerialize, byte[] kryoSerialize, byte[] protoSerialize) {
+        System.out.print("Heating up");
+        for (int i = 0; i < NUM_ITERATIONS; i++) {
+            if (i % (NUM_ITERATIONS / 10) == 0) System.out.print(".");
+            jaxbSerializer.serialize(referenceData);
+            jaxbSerializer.deserialize(jaxbSerialize);
+            jaxbSerializer.deserialize(jaxbSerializer.serialize(referenceData));
+            jsonSerializer.serialize(referenceData);
+            jsonSerializer.deserialize(jsonSerialize);
+            jsonSerializer.deserialize(jsonSerializer.serialize(referenceData));
+            protoSerializer.serialize(referenceDataProto);
+            protoSerializer.deserialize(protoSerialize);
+            protoSerializer.deserialize(protoSerializer.serialize(referenceDataProto));
+            kryoSerializer.serialize(referenceData);
+            kryoSerializer.deserialize(kryoSerialize);
+            kryoSerializer.deserialize(kryoSerializer.serialize(referenceData));
+        }
+        System.out.println("\nStarting tests");
     }
 }
 

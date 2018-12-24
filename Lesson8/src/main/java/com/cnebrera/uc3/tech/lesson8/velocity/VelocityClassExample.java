@@ -1,6 +1,6 @@
 /*********************************************************************
  This class has been automatically generated using Velocity!
- Fri Dec 14 20:47:48 CET 2018
+ Mon Dec 14 23:17:28 CET 2018
  **********************************************************************/
 
 package com.cnebrera.uc3.tech.lesson8.velocity;
@@ -12,18 +12,15 @@ public class VelocityClassExample {
     /**
      * Attribute - myListStringValues
      */
-    private List
-            <String> myListStringValues;
+    private List<String> myListStringValues;
 
     /**
      * Public Constructor
      */
     public VelocityClassExample() {
-        this.myListStringValues = new ArrayList
-                <String>();
+        this.myListStringValues = new ArrayList<>();
 
         // Set values from Velocity
-
         this.myListStringValues.add("Hello");
         this.myListStringValues.add("World!");
         System.out.println("Velocity injected values!");
