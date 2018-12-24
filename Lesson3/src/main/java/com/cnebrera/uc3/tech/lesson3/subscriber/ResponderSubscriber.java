@@ -13,12 +13,12 @@ public class ResponderSubscriber extends MySubscriber implements Observer {
     private Responder responder;
 
     public ResponderSubscriber(Responder responder) {
-        super();
+        super(2);
         this.responder = responder;
     }
 
     public ResponderSubscriber(Responder responder, String channel) {
-        super(channel);
+        super(channel, 2);
         this.responder = responder;
     }
 

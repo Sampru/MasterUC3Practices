@@ -29,8 +29,9 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.1.0</version>
+            <version>3.6.1</version>
         </dependency>
+
         <dependency>
             <groupId>com.esotericsoftware</groupId>
             <artifactId>kryo</artifactId>
@@ -45,4 +46,70 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <id>jaxb</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.cnebrera.uc3.tech.lesson9.jaxb.JaxbTest</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>json</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.cnebrera.uc3.tech.lesson9.json.JsonTest</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>kryo</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.cnebrera.uc3.tech.lesson9.kryo.KryoTest</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>proto</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.cnebrera.uc3.tech.lesson9.proto.ProtoTest</mainClass>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>measure</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.cnebrera.uc3.tech.lesson9.Measurement</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

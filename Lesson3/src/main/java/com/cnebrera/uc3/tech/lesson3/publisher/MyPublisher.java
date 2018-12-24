@@ -10,26 +10,31 @@ import java.util.concurrent.TimeUnit;
 public abstract class MyPublisher implements Runnable {
 
     final int MSG_PER_SEC = 100;
-    private MutableDirectBuffer buffer;
+    final BufferBuilder bb = new BufferBuilder();
     private String channel;
-    private final BufferBuilder bb = new BufferBuilder();
+    private int streamId;
+    MutableDirectBuffer directBuffer;
+    //ByteBuffer buffer;
 
-    MyPublisher() {
+    MyPublisher(int streamId) {
         this.channel = "aeron:ipc";
-        buffer = bb.buffer();
+        this.streamId = streamId;
+        //this.buffer = ByteBuffer.allocate(128);
+        this.directBuffer = bb.buffer();
     }
 
-    MyPublisher(String channel) {
+    MyPublisher(String channel, int streamId) {
         this.channel = channel;
-        buffer = bb.buffer();
+        this.streamId = streamId;
+        //this.buffer = ByteBuffer.allocate(128);
+        this.directBuffer = bb.buffer();
     }
 
     public void execution() {
         Aeron.Context ctx = new Aeron.Context();
-        int streamId = 2;
 
         try (Aeron connection = Aeron.connect(ctx)) {
-            try (Publication publication = connection.addPublication(channel, streamId)) {
+            try (Publication publication = connection.addPublication(this.channel, this.streamId)) {
                 publisherAction(publication);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -39,7 +44,7 @@ public abstract class MyPublisher implements Runnable {
 
     protected abstract void publisherAction(Publication publication) throws InterruptedException;
 
-    protected abstract String generateMsg();
+    protected abstract void generateMsg();
 
     boolean analyzeResult(long result) throws InterruptedException {
         boolean retry = false;
@@ -62,10 +67,6 @@ public abstract class MyPublisher implements Runnable {
             System.out.println("Package sent");
         }
         return retry;
-    }
-
-    MutableDirectBuffer getBuffer() {
-        return this.buffer;
     }
 
     @Override

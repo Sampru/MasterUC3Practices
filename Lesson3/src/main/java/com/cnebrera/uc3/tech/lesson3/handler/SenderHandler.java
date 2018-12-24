@@ -4,6 +4,7 @@ import io.aeron.logbuffer.FragmentHandler;
 import io.aeron.logbuffer.Header;
 import org.agrona.DirectBuffer;
 
+import java.nio.ByteBuffer;
 import java.util.Observable;
 
 public class SenderHandler extends Observable implements FragmentHandler {
@@ -15,27 +16,19 @@ public class SenderHandler extends Observable implements FragmentHandler {
 
     @Override
     public void onFragment(DirectBuffer directBuffer, int i, int i1, Header header) {
-        String msg;
-        byte[] bytes = new byte[i1];
+        this.secondArrive = System.nanoTime();
 
-        directBuffer.getBytes(i, bytes);
-        msg = new String(bytes);
+        this.nextOfferTime = directBuffer.getLong(0);
+        this.firstSend = directBuffer.getLong(10);
+        this.firstArrive = directBuffer.getLong(20);
+        this.secondSend = directBuffer.getLong(30);
 
-        if (msg.startsWith("2$$")) {
-            this.secondArrive = System.nanoTime();
-            this.setChanged();
-            this.notifyObservers();
+        this.setChanged();
+        this.notifyObservers();
 
-            String[] times = msg.replace("2$$", "").split("[$]");
-            this.nextOfferTime = Long.valueOf(times[0]);
-            this.firstSend = Long.valueOf(times[1]);
-            this.firstArrive = Long.valueOf(times[2]);
-            this.secondSend = Long.valueOf(times[3]);
-
-            System.out.println("New timestamp received:");
-            System.out.println("\tSending time: " + (firstArrive - firstSend) + "ns - Arriving time: " + (secondArrive - secondSend) + "ns");
-            System.out.println("\tNext expected send: " + this.nextOfferTime);
-        }
+        System.out.println("New timestamp received:");
+        System.out.println("\tSending time: " + (firstArrive - firstSend) + "ns - Arriving time: " + (secondArrive - secondSend) + "ns");
+        System.out.println("\tNext expected send: " + this.nextOfferTime);
     }
 
     public long getFirstSend() {

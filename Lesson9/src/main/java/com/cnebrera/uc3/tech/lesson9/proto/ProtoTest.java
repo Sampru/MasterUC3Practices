@@ -1,8 +1,6 @@
 package com.cnebrera.uc3.tech.lesson9.proto;
 
-import com.cnebrera.uc3.tech.lesson9.jaxb.JaxbSerializer;
 import com.cnebrera.uc3.tech.lesson9.json.JsonSerializer;
-import com.cnebrera.uc3.tech.lesson9.kryo.KryoSerializer;
 import com.cnebrera.uc3.tech.lesson9.model.ReferenceData;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,16 +14,16 @@ import java.nio.file.Paths;
 /**
  * Main Class that measure the performance
  */
-public class ProtoTest
-{
-    /** a org.slf4j.Logger with the instance of this class given by org.slf4j.LoggerFactory */
+public class ProtoTest {
+    /**
+     * a org.slf4j.Logger with the instance of this class given by org.slf4j.LoggerFactory
+     */
     private final static Logger LOGGER = LoggerFactory.getLogger(ProtoTest.class);
 
     private final static JsonSerializer jsonSerializer = new JsonSerializer();
     private final static ProtoSerializer protoSerializer = new ProtoSerializer();
 
-    public static void main(String[] args) throws URISyntaxException, IOException
-    {
+    public static void main(String[] args) throws URISyntaxException, IOException {
         //Read the info from a xml and populate the class
         URL urlJson = ProtoTest.class.getClassLoader().getResource("Example.json");
 
@@ -37,7 +35,12 @@ public class ProtoTest
         // Create a new builder for a reference data object
         Lesson9.ReferenceData.Builder referenceDataBuilder = Lesson9.ReferenceData.newBuilder();
 
-        // TODO set the parameters in the builder using the values read in referenceData from JSON to ensure both have the same contents
+        // Set the parameters in the builder using the values read in referenceData from JSON to ensure both have the same contents
+        referenceDataBuilder.setMarketId(referenceData.getMarketId())
+                .setAlgorithmIdentifier(referenceData.getAlgorithmIdentifier());
+        referenceData.getListOfInstruments().forEach(i -> referenceDataBuilder.addInstrument(Lesson9.Instrument.newBuilder()
+                .setInstrumentId(i.getInstrumentId())
+                .setSymbol(i.getSymbol())));
 
         // Call build on the builder to generate the object
         Lesson9.ReferenceData referenceDataProto = referenceDataBuilder.build();

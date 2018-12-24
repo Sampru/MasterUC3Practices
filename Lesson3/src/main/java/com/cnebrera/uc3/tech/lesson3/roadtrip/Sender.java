@@ -14,8 +14,30 @@ public class Sender {
     }
 
     private void runtime(String[] args) {
-        SenderPublisher publisher = (args.length > 0) ? new SenderPublisher(args[0]) : new SenderPublisher();
-        SenderSubscriber subscriber = (args.length > 0) ? new SenderSubscriber(args[0]) : new SenderSubscriber();
+        String channel = "";
+        int msgPerSec = -1;
+
+        if (args.length == 2) {
+            try {
+                msgPerSec = Integer.parseInt(args[0]);
+                channel = args[1];
+            } catch (NumberFormatException e) {
+                msgPerSec = Integer.parseInt(args[1]);
+                channel = args[0];
+            }
+            System.out.println("Parameters: mps: " + msgPerSec + " channel: " + channel);
+        } else if (args.length == 1) {
+            try {
+                msgPerSec = Integer.parseInt(args[0]);
+                System.out.println("Parameter: mps: " + msgPerSec);
+            } catch (NumberFormatException e) {
+                channel = args[0];
+                System.out.println("Parameter: channel: " + channel);
+            }
+        }
+
+        SenderPublisher publisher = (args.length == 2) ? new SenderPublisher(channel, msgPerSec) : (args.length == 1) ? (msgPerSec == -1) ? new SenderPublisher(channel) :new SenderPublisher(msgPerSec) : new SenderPublisher();
+        SenderSubscriber subscriber = (!channel.equals("")) ? new SenderSubscriber(channel) : new SenderSubscriber();
         ExecutorService pool = Executors.newFixedThreadPool(2);
 
         System.out.println("Executing threads");

@@ -6,35 +6,44 @@ import io.aeron.Publication;
 public class SenderPublisher extends MyPublisher {
 
     private long nextOfferTime;
+    private int msgPerSec = 600000;
 
     public SenderPublisher() {
-        super();
+        super(2);
     }
 
     public SenderPublisher(String channel) {
-        super(channel);
+        super(channel, 2);
+    }
+
+    public SenderPublisher(int msgPerSec) {
+        super(2);
+        this.msgPerSec = msgPerSec;
+    }
+
+    public SenderPublisher(String channel, int msgPerSec) {
+        super(channel, 2);
+        this.msgPerSec = msgPerSec;
     }
 
     @Override
     protected void publisherAction(Publication publication) throws InterruptedException {
-        long expectedTime = Math.round(1000.0 / MSG_PER_SEC),
+        long expectedTime = Math.round(1000.0 / msgPerSec),
                 result;
         int msgCount = 0;
-        byte[] msgBytes = "".getBytes();
         boolean retry = false;
 
         nextOfferTime = System.nanoTime();
 
-        while (msgCount < 100) {
+        while (msgCount < 1000) {
 
             while (nextOfferTime > System.nanoTime()) ;
 
             if (!retry) {
-                msgBytes = generateMsg().getBytes();
-                this.getBuffer().putBytes(0, msgBytes);
+                generateMsg();
             }
 
-            result = publication.offer(this.getBuffer(), 0, msgBytes.length);
+            result = publication.offer(this.directBuffer, 0, this.directBuffer.capacity());
 
             if (result >= 0) msgCount++;
 
@@ -46,8 +55,9 @@ public class SenderPublisher extends MyPublisher {
     }
 
     @Override
-    protected String generateMsg() {
-        return "1$$" + this.nextOfferTime + "$" + String.valueOf(System.nanoTime());
+    protected void generateMsg() {
+        this.directBuffer.putLong(8, this.nextOfferTime);
+        this.directBuffer.putLong(16, System.nanoTime());
     }
 
 }

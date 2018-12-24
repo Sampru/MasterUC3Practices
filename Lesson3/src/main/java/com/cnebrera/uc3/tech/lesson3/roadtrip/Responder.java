@@ -2,6 +2,7 @@ package com.cnebrera.uc3.tech.lesson3.roadtrip;
 
 import com.cnebrera.uc3.tech.lesson3.publisher.ResponderPublisher;
 import com.cnebrera.uc3.tech.lesson3.subscriber.ResponderSubscriber;
+import sun.nio.ch.DirectBuffer;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,15 +10,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Responder {
-    private AtomicInteger producerIndex, consumerIndex, msgCount;
-    private String[] buffer;
+    private AtomicInteger producerIndex, consumerIndex;
+    private DirectBuffer[] buffer;
     private final int BUFFER_SIZE = 60;
 
     private Responder() {
         this.producerIndex = new AtomicInteger();
         this.consumerIndex = new AtomicInteger();
-        this.msgCount = new AtomicInteger();
-        this.buffer = new String[this.BUFFER_SIZE];
+        this.buffer = new DirectBuffer[this.BUFFER_SIZE];
     }
 
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class Responder {
         System.out.println("Execution finished");
     }
 
-    public boolean putNewMessage(String msg) {
+    public boolean putNewMessage(DirectBuffer msg) {
         if (this.producerIndex.get() != (this.consumerIndex.get() - 1) && !((this.producerIndex.get() == this.BUFFER_SIZE - 1) && this.consumerIndex.get() == 0)) {
             this.buffer[this.producerIndex.getAndAdd(1)] = msg;
             if (this.producerIndex.get() == BUFFER_SIZE) this.producerIndex.set(0);
@@ -54,15 +54,14 @@ public class Responder {
 
     }
 
-    public String readNextMessage() {
-        String msg;
+    public DirectBuffer readNextMessage() {
+        DirectBuffer msg;
         if (this.producerIndex.get() != this.consumerIndex.get()) {
             msg = this.buffer[this.consumerIndex.getAndAdd(1)];
             if (this.consumerIndex.get() == BUFFER_SIZE) this.consumerIndex.set(0);
         } else {
-            msg = "";
+            msg = null;
         }
-
 
         return msg;
     }

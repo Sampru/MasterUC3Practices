@@ -25,11 +25,11 @@ public class P1VolumeControl {
         config.getNetworkConfig().getJoin().getTcpIpConfig().addMember("localhost").setEnabled(true);
         config.getNetworkConfig().getJoin().getMulticastConfig().setEnabled(false);
 
-        HazelcastInstance client = Hazelcast.newHazelcastInstance( config );
+        HazelcastInstance client = Hazelcast.newHazelcastInstance(config);
         IMap<String, MarketOrder> mapCustomers = client.getMap("ordenesMercado");
 
         //Añadimos Listener
-        mapCustomers.addEntryListener(new VolumeListener("BBVA"),true);
+        mapCustomers.addEntryListener(new VolumeListener("BBVA"), true);
 
     }
 }

@@ -1,0 +1,13 @@
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/proto/ProtoTest.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/json/JsonTest.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/kryo/KryoTest.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbTest.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/model/Instrument.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/Serializer.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/json/JsonSerializer.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/model/ReferenceData.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/Measurement.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/proto/Lesson9.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/proto/ProtoSerializer.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbSerializer.java
+/media/sampru/Datuak/eskola/tec-sec-fin/MasterUC3Practices/Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/kryo/KryoSerializer.java

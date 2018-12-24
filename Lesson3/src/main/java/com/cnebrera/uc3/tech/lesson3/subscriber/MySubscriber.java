@@ -6,21 +6,23 @@ import io.aeron.Subscription;
 public abstract class MySubscriber implements Runnable {
 
     private String channel;
+    private int streamId;
 
-    MySubscriber() {
+    MySubscriber(int streamId) {
         this.channel = "aeron:ipc";
+        this.streamId = streamId;
     }
 
-    MySubscriber(String channel) {
+    MySubscriber(String channel, int streamId) {
         this.channel = channel;
+        this.streamId = streamId;
     }
 
     void execution() {
         Aeron.Context ctx = new Aeron.Context();
-        int streamId = 2;
 
         try (Aeron connection = Aeron.connect(ctx)) {
-            try (Subscription subscription = connection.addSubscription(channel, streamId)) {
+            try (Subscription subscription = connection.addSubscription(this.channel, this.streamId)) {
                 subscriberAction(subscription);
             }
         }
