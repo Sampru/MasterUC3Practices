@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51d85c4f-cc83-4d47-8370-b25fcb04e68f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/acceptor/AcceptorRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/acceptor/AcceptorRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/PriceReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/PriceReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lesson8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson8/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="562225537">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cfg" value="2" />
+          <entry key="java" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="11" />
+          <entry key="PLAIN_TEXT" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="288" />
+          <entry key="txt" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="288" />
+          <entry key="PLAIN_TEXT" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-82">
+              <caret line="32" column="38" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriberRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="95" column="62" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/PriceReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1236">
+              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Mar ket Dat aIncre ment al Refresh</find>
+      <find>Price</find>
+      <find>PriceReader</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/acceptor/AcceptorRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/PriceReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriber.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriberRunner.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Lesson10" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="1280" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Lesson10" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Lesson10" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lesso10" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lesso10" type="462c0819:PsiDirectoryNode" />
+              <item name="acceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lesso10" type="462c0819:PsiDirectoryNode" />
+              <item name="initiator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lesso10" type="462c0819:PsiDirectoryNode" />
+              <item name="marketDataProvider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lesson10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lesson10" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MarketDataSubscriberRunner">
+    <configuration name="AcceptorRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cenebrera.uc3.tech.lesso10.acceptor.AcceptorRunner" />
+      <module name="Lesson10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cenebrera.uc3.tech.lesso10.acceptor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InitiatorRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cenebrera.uc3.tech.lesso10.initiator.InitiatorRunner" />
+      <module name="Lesson10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cenebrera.uc3.tech.lesso10.initiator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketDataRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cenebrera.uc3.tech.lesso10.marketDataProvider.MarketDataRunner" />
+      <module name="Lesson10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cenebrera.uc3.tech.lesso10.marketDataProvider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketDataSubscriberRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cenebrera.uc3.tech.lesso10.marketDataProvider.MarketDataSubscriberRunner" />
+      <module name="Lesson10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cenebrera.uc3.tech.lesso10.marketDataProvider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.AcceptorRunner" />
+      <item itemvalue="Application.InitiatorRunner" />
+      <item itemvalue="Application.MarketDataRunner" />
+      <item itemvalue="Application.MarketDataSubscriberRunner" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MarketDataSubscriberRunner" />
+        <item itemvalue="Application.MarketDataRunner" />
+        <item itemvalue="Application.InitiatorRunner" />
+        <item itemvalue="Application.AcceptorRunner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51d85c4f-cc83-4d47-8370-b25fcb04e68f" name="Default Changelist" comment="" />
+      <created>1545613352367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1545613352367</updated>
+      <workItem from="1545613356853" duration="7784000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7784000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962063" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run with VisualVM" />
+      <window_info anchor="bottom" id="Debug with VisualVM" />
+      <window_info anchor="bottom" id="Messages" weight="0.3294702" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5215232" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="CDI" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" weight="0.32928678" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962063" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/acceptor.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/acceptor/AcceptorRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/initiator/QuickFixInitiator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/acceptor/QuickFixAcceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/initiator/InitiatorRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/initiator.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/PriceReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1236">
+          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataSubscriberRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="95" column="62" selection-start-line="95" selection-start-column="62" selection-end-line="95" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cenebrera/uc3/tech/lesso10/marketDataProvider/MarketDataRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="32" column="38" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="install" />
+  </component>
+</project>

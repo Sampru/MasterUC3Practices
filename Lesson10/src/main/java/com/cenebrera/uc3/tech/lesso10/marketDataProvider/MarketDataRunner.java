@@ -14,48 +14,36 @@ import java.net.URL;
 /**
  * Created by alexvarela on 20/12/16.
  */
-public class MarketDataRunner
-{
-    /** a org.slf4j.Logger with the instance of this class given by org.slf4j.LoggerFactory */
+public class MarketDataRunner {
+    /**
+     * a org.slf4j.Logger with the instance of this class given by org.slf4j.LoggerFactory
+     */
     private final static Logger LOGGER = LoggerFactory.getLogger(MarketDataRunner.class);
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //Read the info from a xml and populate the class
         URL url = AcceptorRunner.class.getClassLoader().getResource("acceptor.cfg");
         URL prices = AcceptorRunner.class.getClassLoader().getResource("BBVA.prices");
 
         // MarketDataProvider is your class that implements the Application interface
         PriceReader priceReader = new PriceReader(prices);
-        try
-        {
+        try {
             priceReader.init();
-        }
-        catch (URISyntaxException e)
-        {
-            LOGGER.error("error ",e);
-        }
-        catch (FileNotFoundException e)
-        {
+        } catch (URISyntaxException e) {
+            LOGGER.error("error ", e);
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         Application application = new MarketDataProvider(priceReader);
 
         SessionSettings settings = null;
-        try
-        {
+        try {
             settings = new SessionSettings(new FileInputStream(new File(url.toURI())));
-        }
-        catch (ConfigError configError)
-        {
+        } catch (ConfigError configError) {
             LOGGER.error("Config Error ", configError);
-        }
-        catch (FileNotFoundException e)
-        {
-            LOGGER.error("File [{}] nto found", url,e);
-        }
-        catch (URISyntaxException e)
-        {
+        } catch (FileNotFoundException e) {
+            LOGGER.error("File [{}] nto found", url, e);
+        } catch (URISyntaxException e) {
             LOGGER.error("Uri bad format  url [{}]", url, e);
         }
 
@@ -67,14 +55,10 @@ public class MarketDataRunner
 
 
         Acceptor acceptor = null;
-        try
-        {
-            acceptor = new SocketAcceptor
-                    (application, storeFactory, settings, logFactory, messageFactory);
+        try {
+            acceptor = new SocketAcceptor(application, storeFactory, settings, logFactory, messageFactory);
             acceptor.start();
-        }
-        catch (ConfigError configError)
-        {
+        } catch (ConfigError configError) {
             configError.printStackTrace();
         }
         LOGGER.debug("Start MarketDataRunner");

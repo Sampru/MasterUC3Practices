@@ -1,0 +1,64 @@
+20181224-01:27:55: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181224-01:27:55: Created session: FIX.4.4:Initiator->Acceptor
+20181224-01:27:56: Initiated logon request
+20181224-01:27:56: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181224-01:27:56: Received logon
+20181226-19:05:29: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181226-19:05:29: Session state is not current; resetting FIX.4.4:Initiator->Acceptor
+20181226-19:05:29: Created session: FIX.4.4:Initiator->Acceptor
+20181226-19:05:30: Initiated logon request
+20181226-19:05:30: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181226-19:05:30: Received logon
+20181226-19:06:23: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181226-19:06:23: Created session: FIX.4.4:Initiator->Acceptor
+20181226-19:06:24: Initiated logon request
+20181226-19:06:24: quickfix.SessionException MsgSeqNum too low, expecting 9 but received 1
+20181226-19:06:24: Disconnecting: Verifying message failed: quickfix.SessionException: MsgSeqNum too low, expecting 9 but received 1
+20181226-19:06:24: quickfix.SessionException Logon state is not valid for message (MsgType=2)
+20181226-19:06:24: Already disconnected: Verifying message failed: quickfix.SessionException: Logon state is not valid for message (MsgType=2)
+20181226-19:06:54: Initiated logon request
+20181226-19:06:54: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181226-19:06:54: Received logon
+20181226-19:07:14: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181226-19:07:14: Created session: FIX.4.4:Initiator->Acceptor
+20181226-19:07:15: Initiated logon request
+20181226-19:07:15: quickfix.SessionException MsgSeqNum too low, expecting 4 but received 1
+20181226-19:07:15: Disconnecting: Verifying message failed: quickfix.SessionException: MsgSeqNum too low, expecting 4 but received 1
+20181226-19:07:15: quickfix.SessionException Logon state is not valid for message (MsgType=2)
+20181226-19:07:15: Already disconnected: Verifying message failed: quickfix.SessionException: Logon state is not valid for message (MsgType=2)
+20181226-19:07:45: Initiated logon request
+20181226-19:07:45: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181226-19:07:45: Received logon
+20181226-20:10:19: java.net.ConnectException during connection to localhost/127.0.0.1:10000: java.net.ConnectException: Conexión rehusada (Next retry in 30000 milliseconds)
+20181226-20:17:21: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181226-20:17:21: Created session: FIX.4.4:Initiator->Acceptor
+20181226-20:17:22: Initiated logon request
+20181226-20:17:22: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181226-20:17:22: Received logon
+20181226-20:17:53: java.net.ConnectException during connection to localhost/127.0.0.1:10000: java.net.ConnectException: Conexión rehusada (Next retry in 30000 milliseconds)
+20181227-10:18:13: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181227-10:18:13: Session state is not current; resetting FIX.4.4:Initiator->Acceptor
+20181227-10:18:13: Created session: FIX.4.4:Initiator->Acceptor
+20181227-10:18:13: java.net.ConnectException during connection to localhost/127.0.0.1:10000: java.net.ConnectException: Conexión rehusada (Next retry in 30000 milliseconds)
+20181227-10:19:06: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181227-10:19:06: Created session: FIX.4.4:Initiator->Acceptor
+20181227-10:19:07: Initiated logon request
+20181227-10:19:07: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181227-10:19:07: Received logon
+20181227-10:20:06: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181227-10:20:06: Created session: FIX.4.4:Initiator->Acceptor
+20181227-10:20:07: Initiated logon request
+20181227-10:20:07: quickfix.SessionException MsgSeqNum too low, expecting 6 but received 1
+20181227-10:20:07: Disconnecting: Verifying message failed: quickfix.SessionException: MsgSeqNum too low, expecting 6 but received 1
+20181227-10:20:57: Session FIX.4.4:Initiator->Acceptor schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20181227-10:20:57: Created session: FIX.4.4:Initiator->Acceptor
+20181227-10:20:58: Initiated logon request
+20181227-10:20:58: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181227-10:20:58: Received logon
+20181227-12:21:40: Initiated logon request
+20181227-12:21:40: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181227-12:21:41: Received logon
+20181227-12:45:04: Disconnecting: Timed out waiting for heartbeat
+20181227-12:45:05: Initiated logon request
+20181227-12:45:05: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20181227-12:45:05: Received logon
