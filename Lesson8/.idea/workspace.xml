@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8522c0ab-e635-4cc3-91f5-4dfaef706197" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/velocity/VelocityClassExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/FullTeacherInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/FullTeacherInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/Lesson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/Lesson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/ObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/StudentLessons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/StudentLessons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/TeacherInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/xjc/TeacherInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/velocityClassExample.vm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/velocityClassExample.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/Lesson9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/Lesson9.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/Measurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/Measurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/json/JsonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/json/JsonSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/json/JsonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/json/JsonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/model/Instrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/model/Instrument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/model/ReferenceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/model/ReferenceData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/proto/Lesson9.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/proto/Lesson9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/proto/ProtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/java/com/cnebrera/uc3/tech/lesson9/proto/ProtoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/src/main/resources/lesson9.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/src/main/resources/lesson9.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/Lesson9-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/Lesson9-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/Measurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/Measurement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/Serializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/Serializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbSerializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/jaxb/JaxbTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/json/JsonSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/json/JsonSerializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/json/JsonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/json/JsonTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/kryo/KryoSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/kryo/KryoSerializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/kryo/KryoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/kryo/KryoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/model/Instrument.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/model/Instrument.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/model/ReferenceData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/model/ReferenceData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9$Instrument.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9$Instrument.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9$ReferenceData$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9$ReferenceData$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9$ReferenceData.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9$ReferenceData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/Lesson9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/ProtoSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/ProtoSerializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/ProtoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/com/cnebrera/uc3/tech/lesson9/proto/ProtoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/classes/lesson9.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/classes/lesson9.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lesson9/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../Lesson9/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="8522c0ab-e635-4cc3-91f5-4dfaef706197" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +27,7 @@
     <session id="-1582095291">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -124,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/velocityClassExample.vm">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -141,8 +98,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/velocity/VelocityClassExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            <state relative-caret-position="158">
+              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/velocity/VelocityHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -160,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/velocity/VelocityClassExample.java.old">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -303,7 +265,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lesson10" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -412,12 +374,12 @@
       <workItem from="1544807069134" duration="4926000" />
       <workItem from="1544816775610" duration="118000" />
       <workItem from="1545160344825" duration="259000" />
-      <workItem from="1545586445341" duration="5045000" />
+      <workItem from="1545586445341" duration="5782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15182000" />
+    <option name="totallyTimeSpent" value="15919000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -430,16 +392,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2996965" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2996965" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294702" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848256" visible="true" weight="0.3062914" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848256" weight="0.3062914" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924126" weight="0.410596" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -460,7 +421,7 @@
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32852808" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2996965" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2996965" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -621,14 +582,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/velocity/VelocityHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/velocity/VelocityClassExample.java.old">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -642,14 +603,19 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/velocityClassExample.vm">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cnebrera/uc3/tech/lesson8/velocity/VelocityClassExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="158">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
